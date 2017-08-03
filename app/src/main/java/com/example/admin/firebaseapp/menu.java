@@ -97,6 +97,8 @@ public class menu extends AppCompatActivity
 
 
         } else if (id == R.id.nav_materiais) {
+            Intent ArquivosActivity = new Intent(this, ArquivosActivity.class);
+            startActivity(ArquivosActivity);
 
         } else if (id == R.id.nav_chat) {
 

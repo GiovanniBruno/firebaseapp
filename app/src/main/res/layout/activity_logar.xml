@@ -6,13 +6,24 @@
     android:layout_height="match_parent"
     tools:context="com.example.admin.firebaseapp.activity_logar">
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:padding="5px"
+        app:srcCompat="@drawable/estudante"
+        android:layout_above="@+id/linearLayout3" />
+
+    <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout3">
+        android:id="@+id/linearLayout3"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="80dp">
 
         <TextView
             android:id="@+id/textView8"

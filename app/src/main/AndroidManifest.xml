@@ -3,11 +3,11 @@
     package="com.example.admin.firebaseapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/initiallauch"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -26,19 +26,24 @@
             android:label="@string/title_activity_menu"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".criarTarefas" />
+        <activity android:name=".activity_login" />
         <activity android:name=".listTarefas" />
         <activity android:name=".dadosTarefas" />
         <activity android:name=".activity_mural" />
         <activity android:name=".activityNotas" />
-        <activity android:name=".activity_login">
+        <activity android:name=".SplashScreen"
+                  android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"
+                    />
             </intent-filter>
         </activity>
         <activity android:name=".activity_logar" />
-        <activity android:name=".activity_profile"></activity>
+        <activity android:name=".activity_profile" />
+        <activity android:name=".ArquivosActivity" />
+        <activity android:name=".Lista_Imagens_Activity" />
+
     </application>
 
 </manifest>

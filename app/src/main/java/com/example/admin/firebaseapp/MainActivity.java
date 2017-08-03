@@ -19,7 +19,5 @@ public class MainActivity extends AppCompatActivity {
         Intent chatActivity = new Intent(this, chatActivity.class);
         startActivity(chatActivity);
 
-
-
     }
 }
