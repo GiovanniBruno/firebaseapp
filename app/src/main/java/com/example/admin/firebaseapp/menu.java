@@ -50,8 +50,10 @@ public class menu extends AppCompatActivity
         Taretas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(menu.this, "rola deu certo", Toast.LENGTH_SHORT).show();
+                Toast.makeText(menu.this, "Tarefas", Toast.LENGTH_SHORT).show();
                 //implementar
+
+
             }
         });
     }
@@ -103,6 +105,8 @@ public class menu extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
+            Intent menu = new Intent(this, menu.class);
+            startActivity(menu);
 
         } else if (id == R.id.nav_mural) {
             Intent activity_mural = new Intent(this, activity_mural.class);
@@ -113,8 +117,8 @@ public class menu extends AppCompatActivity
             startActivity(listTarefas);
 
         } else if (id == R.id.nav_notas) {
-            Intent activityNotas = new Intent(this, activityNotas.class);
-            startActivity(activityNotas);
+            Intent listNotas = new Intent(this, listNotas.class);
+            startActivity(listNotas);
 
 
         } else if (id == R.id.nav_materiais) {
@@ -123,7 +127,7 @@ public class menu extends AppCompatActivity
 
         } else if (id == R.id.nav_chat) {
 
-            Intent chatActivity = new Intent(this, MainActivity.class);
+            Intent chatActivity = new Intent(this, chatActivity.class);
             startActivity(chatActivity);
         }
 

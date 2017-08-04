@@ -30,20 +30,21 @@
         <activity android:name=".listTarefas" />
         <activity android:name=".Tarefas" />
         <activity android:name=".activity_mural" />
-        <activity android:name=".activityNotas" />
-        <activity android:name=".SplashScreen"
-                  android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".criarNotas" />
+        <activity
+            android:name=".SplashScreen"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER"
-                    />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".activity_logar" />
         <activity android:name=".activity_profile" />
         <activity android:name=".ArquivosActivity" />
         <activity android:name=".Lista_Imagens_Activity" />
-
+        <activity android:name=".listNotas"></activity>
     </application>
 
 </manifest>

@@ -74,7 +74,7 @@ public class activity_login extends AppCompatActivity implements View.OnClickLis
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                                 finish();
-                                startActivity(new Intent(getApplicationContext(),activity_profile.class));
+                                startActivity(new Intent(getApplicationContext(),menu.class));
                         }else{
                             Toast.makeText(activity_login.this, "Não pode se registrar... Tente novamente",
                                     Toast.LENGTH_SHORT).show();

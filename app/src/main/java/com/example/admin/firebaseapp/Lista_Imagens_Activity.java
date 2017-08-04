@@ -55,5 +55,7 @@ public class Lista_Imagens_Activity extends AppCompatActivity {
                 progressDialog.dismiss();
             }
         });
+
+
     }
 }

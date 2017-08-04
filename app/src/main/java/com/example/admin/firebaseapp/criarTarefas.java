@@ -45,7 +45,7 @@ public class criarTarefas extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Tarefas dadosDasTarefas = new Tarefas();
+
                 String assunto=(edAssunto.getText().toString());
                 String data=(edData.getText().toString());
                 String descricao=(edDescricao.getText().toString());
@@ -62,6 +62,12 @@ public class criarTarefas extends AppCompatActivity {
 
         });
 
+        btnCancelar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btnCancelar.setText(" ");
+            }
+        });
 
     }
 }

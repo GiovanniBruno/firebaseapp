@@ -74,7 +74,7 @@ public class activity_logar extends AppCompatActivity implements View.OnClickLis
                         if (task.isSuccessful()){
                             //start profile acitivty
                             finish();
-                            startActivity(new Intent(getApplicationContext(),activity_profile.class));
+                            startActivity(new Intent(getApplicationContext(),menu.class));
                         }
                     }
                 });

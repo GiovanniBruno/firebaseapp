@@ -16,34 +16,33 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class listTarefas extends AppCompatActivity {
-    private ListView listViewTarefas;
-    private DatabaseReference databaseTarefas;
-    List<Tarefas> tarefasList;
+public class listNotas extends AppCompatActivity {
 
-
+    private ListView listViewNotas;
+    private DatabaseReference databaseNotas;
+    List<Notas> notasList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_tarefas);
-        listViewTarefas = (ListView) findViewById(R.id.listView_tarefas);
-        tarefasList = new ArrayList<>();
-        databaseTarefas = FirebaseDatabase.getInstance().getReference("tarefas");
-        databaseTarefas.addValueEventListener(new ValueEventListener() {
+        setContentView(R.layout.activity_list_notas);
+        listViewNotas = (ListView) findViewById(R.id.listView_notas);
+        notasList = new ArrayList<>();
+        databaseNotas = FirebaseDatabase.getInstance().getReference("notas");
+        databaseNotas.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                tarefasList.clear();
-                for(DataSnapshot snapshot: dataSnapshot.getChildren()){
-                    Tarefas  tarefas = snapshot.getValue(Tarefas.class);
-                    tarefasList.add(tarefas);
+                notasList.clear();
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    Notas notas = snapshot.getValue(Notas.class);
+                    notasList.add(notas);
 
                 }
                 //Adapter
 
-                AdapterTarefas adapter = new AdapterTarefas(listTarefas.this,tarefasList );
+                AdapterNotas adapter = new AdapterNotas(listNotas.this,notasList);
 
-                listViewTarefas.setAdapter(adapter);
+                listViewNotas.setAdapter(adapter);
 
             }
 
@@ -61,18 +60,15 @@ public class listTarefas extends AppCompatActivity {
                 fab.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent criarTarefas = new Intent(getApplicationContext(), criarTarefas.class);
-                        startActivity(criarTarefas);
+                        Intent activityNotas = new Intent(getApplicationContext(), criarNotas.class);
+                        startActivity(activityNotas);
 
                     }
                 });
             }
         });
-
     }
 
 
 }
-
-
 

@@ -79,14 +79,13 @@ para não se esquecer de executá-las." />
                 android:layout_height="wrap_content"
                 android:textSize="18dp"
                 android:textStyle="bold"
-                android:text="Materiais" />
+                android:text="Fotos" />
 
             <TextView
                 android:id="@+id/textDescricao2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Acesse arquivos postados pelos
-professores." />
+                android:text="Carregue e salve imagens de seu celular." />
 
         </LinearLayout>
 
