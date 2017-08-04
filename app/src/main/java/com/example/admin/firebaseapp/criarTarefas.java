@@ -6,8 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
+import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.List;
+
+import static android.R.attr.rating;
 
 public class criarTarefas extends AppCompatActivity {
 
@@ -18,6 +24,8 @@ public class criarTarefas extends AppCompatActivity {
     private EditText edMateria;
     private Button btnSalvar;
     private Button btnCancelar;
+    DatabaseReference bancotarefa;
+    List<Tarefas> listtarefases;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,29 +38,28 @@ public class criarTarefas extends AppCompatActivity {
         edMateria = (EditText) findViewById(R.id.edMateria);
         btnSalvar = (Button) findViewById(R.id.btnSalvar);
         btnCancelar = (Button) findViewById(R.id.btnCancelar);
+        bancotarefa =FirebaseDatabase.getInstance().getReference("tarefas");
 
 
         btnSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                dadosTarefas dadosDasTarefas = new dadosTarefas();
-                dadosDasTarefas.setAssunto(edAssunto.getText().toString());
-                dadosDasTarefas.setData(edData.getText().toString());
-                dadosDasTarefas.setDescricao(edDescricao.getText().toString());
-                dadosDasTarefas.setCurso(edCurso.getText().toString());
-                dadosDasTarefas.setMateria(edMateria.getText().toString());
+                Tarefas dadosDasTarefas = new Tarefas();
+                String assunto=(edAssunto.getText().toString());
+                String data=(edData.getText().toString());
+                String descricao=(edDescricao.getText().toString());
+                String curso=(edCurso.getText().toString());
+                String materias=(edMateria.getText().toString());
 
-                Intent it = new Intent(criarTarefas.this, listTarefas.class);
-                it.putExtra("assunto", edAssunto.getText().toString());
-                it.putExtra("data", edData.getText().toString());
-                it.putExtra("descrição", edDescricao.getText().toString());
-                it.putExtra("curso", edCurso.getText().toString());
-                it.putExtra("materia", edMateria.getText().toString());
+                String id  = bancotarefa.push().getKey();
+                Tarefas tarefas = new Tarefas(id,assunto,data,descricao,curso,materias);
+                bancotarefa.child(id).setValue(tarefas);
+                finish();
 
-                startActivity(it);
 
             }
+
         });
 
 

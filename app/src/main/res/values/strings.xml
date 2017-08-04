@@ -12,6 +12,7 @@
     <string name="action_settings">Configurações</string>
     <string name="action_sair">Sair</string>
     <string name="title_activity_list_tarefas">listTarefas</string>
+    <string name="des3">Acesse ao calendário letivo e fique por dentro de tudo.</string>
 
 
 </resources>

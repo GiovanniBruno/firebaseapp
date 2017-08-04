@@ -18,6 +18,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/tarefas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -54,6 +55,7 @@ para não se esquecer de executá-las." />
 
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/materias"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -90,6 +92,7 @@ professores." />
 
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/mural"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -119,14 +122,14 @@ professores." />
                 android:id="@+id/textDescricao3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Acesse ao calendário letivo e fique
-por dentro de tudo." />
+                android:text="@string/des3" />
 
 
         </LinearLayout>
 
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/notas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">

@@ -1,13 +1,35 @@
 package com.example.admin.firebaseapp;
 
 
-public class dadosTarefas{
+public class Tarefas {
+    public String getIdTarefa() {
+        return idTarefa;
+    }
 
+
+
+    private String idTarefa;
     private String assunto;
     private String data;
     private String descricao;
     private String curso;
     private String materia;
+
+    public Tarefas() {
+    }
+
+    public Tarefas(String idTarefa,String assunto, String data, String descricao, String curso, String materia) {
+        this.idTarefa=idTarefa;
+        this.assunto = assunto;
+        this.data = data;
+        this.descricao = descricao;
+        this.curso = curso;
+        this.materia = materia;
+    }
+
+    public void setIdTarefa(String idTarefa) {
+        this.idTarefa = idTarefa;
+    }
 
     public String getAssunto() {
         return assunto;

@@ -28,7 +28,7 @@
         <activity android:name=".criarTarefas" />
         <activity android:name=".activity_login" />
         <activity android:name=".listTarefas" />
-        <activity android:name=".dadosTarefas" />
+        <activity android:name=".Tarefas" />
         <activity android:name=".activity_mural" />
         <activity android:name=".activityNotas" />
         <activity android:name=".SplashScreen"

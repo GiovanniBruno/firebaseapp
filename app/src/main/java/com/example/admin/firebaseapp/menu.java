@@ -11,11 +11,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-
+import android.widget.LinearLayout;
+import android.widget.Toast;
 
 
 public class menu extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+    LinearLayout Taretas,Materias,Calendario;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,8 @@ public class menu extends AppCompatActivity
         setContentView(R.layout.activity_menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        findViewByIds();
+        onclick();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -33,6 +37,23 @@ public class menu extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+    }
+
+
+
+    private void findViewByIds() {
+        Taretas=(LinearLayout)findViewById(R.id.tarefas);
+        Materias=(LinearLayout)findViewById(R.id.materias);
+
+    }
+    private void onclick() {
+        Taretas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(menu.this, "rola deu certo", Toast.LENGTH_SHORT).show();
+                //implementar
+            }
+        });
     }
 
     @Override
